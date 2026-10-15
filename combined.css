@@ -1,0 +1,154 @@
+/* =========================================================
+   COMBINED STYLESHEET
+   Merged from:
+   - home.css
+   - about-us.css
+   - learn-more.css
+   - our-flavours.css
+   - the-process.css
+   ========================================================= */
+
+/* ---------- Shared styles ---------- */
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.hard-shadow {
+    box-shadow: 4px 4px 0px 0px #291806;
+}
+
+/* ---------- Home ---------- */
+
+.hard-shadow-active:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px #291806;
+}
+
+.crunch-clip {
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.sawtooth {
+    mask-image: repeating-linear-gradient(45deg, #000 0 10px, transparent 0 20px);
+}
+
+.skew-1 {
+    transform: rotate(-1deg);
+}
+
+.skew-2 {
+    transform: rotate(1.5deg);
+}
+
+/* ---------- About Us ---------- */
+
+.hard-shadow-active {
+    box-shadow: 0px 0px 0px 0px #291806;
+}
+
+.zigzag-border {
+    mask-image:
+        linear-gradient(to bottom, transparent 0%, black 5px, black calc(100% - 5px), transparent 100%),
+        linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black 100%),
+        linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black 100%);
+    mask-size: 100% 100%, 10px 10px, 10px 10px;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.animate-float {
+    animation: floating 4s ease-in-out infinite;
+}
+
+.morgan {
+    font-family: 'Morganite', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.morgan:hover {
+    color: orange;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* ---------- Learn More node -v
+---------- */
+
+.hard-shadow-hover:hover {
+    box-shadow: 6px 6px 0px 0px #291806;
+    transform: translate(-2px, -2px);
+}
+
+.zest-blob {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.chip-rotate-1 {
+    transform: rotate(1deg);
+}
+
+.chip-rotate-n1 {
+    transform: rotate(-1deg);
+}
+
+.chip-rotate-2 {
+    transform: rotate(2.5deg);
+}
+
+/* ---------- Our Flavours ---------- */
+
+.crunch-shadow {
+    box-shadow: 4px 4px 0px 0px #291806;
+}
+
+.crunch-shadow-active {
+    box-shadow: 0px 0px 0px 0px #291806;
+    transform: translate(4px, 4px);
+}
+
+.jagged-border {
+    clip-path: polygon(
+        0% 0%, 5% 2%, 10% 0%, 15% 2%, 20% 0%, 25% 2%,
+        30% 0%, 35% 2%, 40% 0%, 45% 2%, 50% 0%, 55% 2%,
+        60% 0%, 65% 2%, 70% 0%, 75% 2%, 80% 0%, 85% 2%,
+        90% 0%, 95% 2%, 100% 0%,
+        100% 100%, 95% 98%, 90% 100%, 85% 98%, 80% 100%,
+        75% 98%, 70% 100%, 65% 98%, 60% 100%, 55% 98%,
+        50% 100%, 45% 98%, 40% 100%, 35% 98%, 30% 100%,
+        25% 98%, 20% 100%, 15% 98%, 10% 100%, 5% 98%, 0% 100%
+    );
+}
+
+/* ---------- The Process ---------- */
+
+.step-path {
+    stroke-dasharray: 10, 10;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
